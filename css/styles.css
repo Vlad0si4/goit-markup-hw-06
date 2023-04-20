@@ -257,6 +257,11 @@ background-color: var(--color-green);
   fill: var(--color-white);
   border-color: transparent;
 }
+.sub-btn:hover,
+.sub-btn:focus {
+  border-color: #404bbf;
+ 
+}
 /**
   |============================
   | BUTTON
@@ -674,9 +679,7 @@ background-color: var(--color-iris);
   background-color: rgba(46, 47, 66, 0.4);
 
   opacity: 1;
-  transition: opacity, visibility;
-  transition-duration:  250ms;
-  transition-timing-function:  linear;
+  transition: opacity var(--anim-hover), visibility var(--anim-hover);
 
 }
 .backdrop.is-hidden {
@@ -684,7 +687,7 @@ background-color: var(--color-iris);
   pointer-events: none;
   visibility: hidden;
 
-  /* transition-delay: 400ms; */
+  transition-delay: 500ms;
 }
 
 
@@ -692,7 +695,7 @@ background-color: var(--color-iris);
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1) ;
 
   padding:24px;
 
@@ -707,8 +710,12 @@ background-color: var(--color-iris);
   border-radius: 4px;
 
   opacity: 1;
-  transition: transition var(--anim-hover)
+  transition: transform var(--anim-hover) 400ms, opacity var(--anim-hover) 400ms;
 
+}
+.backdrop.is-hidden .modal {
+  transform: translateX(-50%) translateY(-50%) scale(0.3);
+  opacity: 0;
 }
 
 .modal-btn {
@@ -831,22 +838,75 @@ color: var(--color-light-slate);
   | SUBSCRIBE
   |============================
 */
-.subscribe-title {
-    color: var(--color-white);
-    margin-bottom: 16px;
-
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 1.5;
-  
-      letter-spacing: 0.02em;
+.wrappers-sub {
+display: flex;
+align-items: center;
+justify-content: center;
 }
-.form-sub {
+.sub-label{
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 .sub-btn {
+  display: flex;
+  align-items: center;
+ 
 
+
+width: 165px;
+height: 40px;
+
+border-radius: 1px solid var(--color-slate);
+padding: 8px 24px;
+margin-left: 60px;
+border-radius: 4px;
+
+background-color: var(--color-iris);
+color: var(--color-cloud);
+
+transition: color var(--anim-hover)
+}
+
+.sub-email {
+  border: 1px solid var(--color-white);
+  border-radius: 4px;
+  height: 40px;
+  padding: 16px;
+  outline: 1px transparent;
+  width: 264px;
+
+  background-color: var(--color-navy-blue) ;
+  color: var(--color-white);
+  
+}
+
+.sub-email::placeholder {
+  display: flex;
+  align-items: center;
+  color: var(--color-white);
+  font-size: 12px;
+  margin-right: 16px;
+  transition: border-color var(--anim-hover)
+
+  
+}
+.sub-form{
+  /* position: relative; */
+}
+.sub-icon {
+ /* position: absolute; 
+  top: 60%;
+  right: 0;  */
+  /* display: flex;
+  align-items: center; */
+
+  padding: 8px 24px;
+
+/* transform: rotateX(50%); */
+
+
+
+
+  
 }
