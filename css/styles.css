@@ -618,7 +618,10 @@ justify-content: center;
 .footer-wrapper {
   display: flex;
   align-items: baseline;
-  gap: 120px;
+
+}
+.footer-logo-wrapper {
+  margin-right: 120px;
 }
 /**
   |============================
@@ -626,6 +629,9 @@ justify-content: center;
   |============================
 */
 
+.social-wrapper {
+  margin-right: 80px;
+}
 .social-list {
   display: flex;
   gap: 16px;
@@ -904,12 +910,12 @@ margin: 0 auto;
   | SUBSCRIBE
   |============================
 */
-.wrappers-sub {
-display: flex;
-align-items: center;
-justify-content: center;
-}
 
+.sub-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .sub-btn {
   display: flex;
   align-items: center;
